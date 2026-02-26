@@ -14,7 +14,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'https://github.com/YAPTsarevLD/nodejs-pm2-deploy.git',
       path: '/home/tsarev_l/nodejs-pm2-deploy',
-      'post-deploy': 'cd backend && npm i && npm run build && pm2 restart ecosystem.config.js --env production',
+      'post-deploy': 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && cd backend && npm i && npm run build && pm2 restart ecosystem.config.js --env production',
     },
   },
 };
