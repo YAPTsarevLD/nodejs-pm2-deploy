@@ -15,8 +15,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:legacy": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build:legacy && scp -Cr ./build/* tsarev_l@130.193.53.21:/home/tsarev_l/mesto-frontend"
   },
   "eslintConfig": {
     "extends": [
