@@ -18,6 +18,9 @@ app.use(cors({
     'https://mesto.tsarev.nomorepartiessite.ru',
     'https://api.mesto.tsarev.nomorepartiessite.ru',
   ],
+  credentials: true,
+  methods: ['GET','HEAD','PUT','PATCH','POST','DELETE'],
+  allowedHeaders: ['Content-Type','Authorization']
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
